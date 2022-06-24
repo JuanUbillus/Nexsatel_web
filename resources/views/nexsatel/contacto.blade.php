@@ -3,7 +3,7 @@
 
 <main id="main">
 
-  <!-- ======= Breadcrumbs ======= -->
+  <!-- ======= Breadcrumbs ssss ======= -->
   <section id="breadcrumbs" class="breadcrumbs">
     <div class="container">
       <h2>Contáctanos</h2>
@@ -62,17 +62,17 @@
                   <option value="">Departamento</option>
                   @foreach ($departamentos as $departamento)
                     <option value="{{ $departamento->nombre }}">{{ $departamento->nombre }}</option>
-                  @endforeach                
+                  @endforeach
                 </select>
               </div>
               <div class="col-md-6 form-group mt-3">
                 <select id="provincia" name="provincia" class="form-control">
-                  
+
                 </select>
               </div>
               <div class="col-md-6 form-group mt-3">
                 <select id="distrito" name="distrito" class="form-control">
-                  
+
                 </select>
               </div>
               <div class="col-md-6 form-group mt-3">
@@ -95,7 +95,7 @@
                 <input type="text" class="form-control" name="ndocumento" placeholder="N° de documento" required>
               </div>
             </div>
-            
+
             <div class="text-center"><button type="submit">Enviar Mensaje</button></div>
           </form>
         </div>
@@ -110,11 +110,11 @@ $(document).ready(function(){
     $("#departamento").on('change', function () {
         $("#departamento option:selected").each(function () {
             elegido=$(this).val();
-            
+
             $.get('/provincias/'+elegido, function(data){
               console.log(data)
                 $("#provincia").html(data);
-            });			
+            });
         });
    });
 });

@@ -41,9 +41,9 @@
                         <td>{{ $solicitud->id }}</td>
                         <td>{{ $solicitud->nombre }}</td>
                         <td>{{ $solicitud->apellido }}</td>
-                        <td>{{ $solicitud->departamento }}</td>
-                        <td>{{ $solicitud->provincia }}</td>
-                        <td>{{ $solicitud->distrito }}</td>
+                        <td>{{ $solicitud->ubigeo->departamento->nombre }}</td>
+                        <td>{{ $solicitud->ubigeo->provincia->nombre }}</td>
+                        <td>{{ $solicitud->ubigeo->distrito->nombre }}</td>
                         <td>{{ $solicitud->direccion }}</td>
                         <td>{{ $solicitud->telefono }}</td>
                         <td>{{ $solicitud->email }}</td>
@@ -51,7 +51,7 @@
                         <td>{{ $solicitud->ndocumento }}</td>
                       </tr>
                     @endforeach
-                  
+
                 </tbody>
               </table>
             </div>

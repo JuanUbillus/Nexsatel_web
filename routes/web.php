@@ -36,10 +36,10 @@ Route::group(['middleware' => 'auth'], function () {
         Route::get('/usuario/editar/{id}', [UsuarioController::class, 'edit']);
         Route::post('/usuario/actualizar/{id}', [UsuarioController::class, 'update']);
         Route::get('/usuario/borrar/{id}', [UsuarioController::class, 'delete']);
-        
+
     });
     Route::get('/perfil', [UsuarioController::class, 'perfil']);
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+
     /* EMPRESA */
     Route::post('/empresa/guardar', [EmpresaController::class, 'store']);
     Route::get('/empresa/editar/{id}', [EmpresaController::class, 'edit']);
@@ -64,31 +64,31 @@ Route::group(['middleware' => 'auth'], function () {
         Route::get('/estilo/cabecera', 'cabecera_index')->name('cabecera');
         Route::get('/estilo/cabecera/editar/{id}', 'cabecera_edit')->name('cabecera.edit');
         Route::post('/estilo/cabecera/update/{id}', 'cabecera_update')->name('cabecera.update');
-    });    
+    });
     /* LOGO */
     Route::controller(EstiloController::class)->group(function (){
         Route::get('/estilo/logo', 'logo_index')->name('logo');
         Route::get('/estilo/logo/editar/{id}', 'logo_edit')->name('logo.edit');
         Route::post('/estilo/logo/update/{id}', 'logo_update')->name('logo.update');
-    }); 
+    });
     /* REDES SOCIALES */
     Route::controller(EstiloController::class)->group(function (){
         Route::get('/redes', 'redes_index')->name('redes');
         Route::get('/redes/editar/', 'redes_edit')->name('redes.edit');
         Route::post('/redes/update', 'redes_update')->name('redes.update');
-    }); 
+    });
     /* PRECIOS PRINCIPALES */
     Route::controller(PrecioController::class)->group(function (){
         Route::get('/precios', 'precios_index')->name('precios');
         Route::get('/precios/editar/', 'precios_edit')->name('precios.edit');
         Route::post('/precios/update', 'precios_update')->name('precios.update');
-    }); 
+    });
     /* CARACTERISTICAS */
     Route::controller(CaracteristicaController::class)->group(function (){
         Route::get('/caracteristicas', 'caracteristicas_index')->name('caracteristicas');
         Route::get('/caracteristicas/editar/{id}', 'caracteristicas_edit')->name('caracteristicas.edit');
         Route::post('/caracteristicas/update/{id}', 'caracteristicas_update')->name('caracteristicas.update');
-    }); 
+    });
     /* SLIDERS */
     Route::controller(EstiloController::class)->group(function (){
         Route::get('/sliders', 'sliders_index')->name('sliders');
@@ -97,7 +97,8 @@ Route::group(['middleware' => 'auth'], function () {
     });
 });
 Route::controller(ApiController::class)->group(function (){
-    Route::get('/provincias/{departament}', 'provincia'); 
+    Route::get('/provincias/{departament}', 'provincia');
+    Route::get('/distritos/{provincia}', 'distrito');
 });
 
 Route::get('/linkear',function(){

@@ -3,7 +3,7 @@
 
 <main id="main">
 
-  <!-- ======= Breadcrumbs ======= -->
+  <!-- ======= Breadcrumbs ssss ======= -->
   <section id="breadcrumbs" class="breadcrumbs">
     <div class="container">
       <h2>Contáctanos</h2>
@@ -58,21 +58,21 @@
                 <input type="text" name="apellido" class="form-control"  placeholder="Apellido" required>
               </div>
               <div class="col-md-6 form-group mt-3">
-                <select id="departamento" name="departamento" class="form-control">
+                <select id="departamento" name="departamento" class="form-control" required>
                   <option value="">Departamento</option>
                   @foreach ($departamentos as $departamento)
-                    <option value="{{ $departamento->nombre }}">{{ $departamento->nombre }}</option>
-                  @endforeach                
+                    <option value="{{ $departamento->id }}">{{ $departamento->nombre }}</option>
+                  @endforeach
                 </select>
               </div>
               <div class="col-md-6 form-group mt-3">
-                <select id="provincia" name="provincia" class="form-control">
-                  
+                <select id="provincia" name="provincia" class="form-control" required>
+                    <option value="">Provincia</option>
                 </select>
               </div>
               <div class="col-md-6 form-group mt-3">
-                <select id="distrito" name="distrito" class="form-control">
-                  
+                <select id="distrito" name="distrito" class="form-control"required>
+                    <option value="">Distrito</option>
                 </select>
               </div>
               <div class="col-md-6 form-group mt-3">
@@ -82,10 +82,10 @@
                 <input type="text" name="telefono" class="form-control"  placeholder="Celular" required>
               </div>
               <div class="col-md-6 form-group mt-3">
-                <input type="email" class="form-control" name="email" placeholder="Email">
+                <input type="email" class="form-control" name="email" placeholder="Email" required>
               </div>
               <div class="col-md-6 form-group mt-3">
-                <select name="tdocumento" class="form-control">
+                <select name="tdocumento" class="form-control" required>
                   <option value="" disabled selected hidden>Tipo de Documento</option>
                   <option value="DNI">DNI</option>
                   <option value="RUC">RUC</option>
@@ -95,7 +95,7 @@
                 <input type="text" class="form-control" name="ndocumento" placeholder="N° de documento" required>
               </div>
             </div>
-            
+
             <div class="text-center"><button type="submit">Enviar Mensaje</button></div>
           </form>
         </div>
@@ -106,17 +106,25 @@
 @section('script')
 <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
 <script language="javascript">
-$(document).ready(function(){
+
     $("#departamento").on('change', function () {
         $("#departamento option:selected").each(function () {
-            elegido=$(this).val();
-            
+            let elegido=$(this).val();
             $.get('/provincias/'+elegido, function(data){
-              console.log(data)
                 $("#provincia").html(data);
-            });			
+            });
         });
-   });
-});
+   })
+
+    $("#provincia").on('change', function () {
+
+        $("#provincia option:selected").each(function () {
+            let elegido=$(this).val();
+            $.get('/distritos/'+elegido, function(data){
+                $("#distrito").html(data);
+            });
+        });
+    });
+
 </script>
 @endsection

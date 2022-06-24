@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Exports\solicitudesExport;
 use App\Models\Solicitud;
+use App\Models\Ubigeo;
 use Illuminate\Http\Request;
 use Maatwebsite\Excel\Facades\Excel;
 
@@ -16,11 +17,13 @@ class SolicitudController extends Controller
 
     public function store(Request $request){
         $solicitud = New Solicitud;
+
+        $ubigeo = Ubigeo::where('departamento_id',$request->departamento)
+            ->where('provincia_id',$request->provincia)
+            ->where('distrito_id',$request->distrito)->first();
+        $solicitud->ubigeo_id = $ubigeo->id;
         $solicitud->nombre=$request->nombre;
         $solicitud->apellido=$request->apellido;
-        $solicitud->departamento=$request->departamento;
-        $solicitud->provincia=$request->provincia;
-        $solicitud->distrito=$request->distrito;
         $solicitud->direccion=$request->direccion;
         $solicitud->telefono=$request->telefono;
         $solicitud->email=$request->email;

@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Departamento extends Model
 {
     use HasFactory;
-    public function ubigeo(){
-        return $this->belongsTo(Ubigeo::class);
+    public function ubigeos(){
+        return $this->hasMany(Ubigeo::class);
     }
 }

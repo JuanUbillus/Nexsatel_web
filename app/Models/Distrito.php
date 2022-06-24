@@ -8,4 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Distrito extends Model
 {
     use HasFactory;
+    public function ubigeos(){
+        return $this->hasMany(Ubigeo::class);
+    }
 }

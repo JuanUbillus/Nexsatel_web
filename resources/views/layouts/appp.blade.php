@@ -61,7 +61,7 @@
           <li><a class="active" href="{{ route('index') }}">Inicio</a></li>
           <li><a href="{{ route('nosotros') }}">Nosotros</a></li>
           <li><a href="{{ route('pagos') }}">Formas de Pago</a></li>
-          <!--<li><a href="{{ route('planes') }}">Planes</a></li>-->
+          <li><a href="{{ route('planes') }}">Planes</a></li>
           <li class="dropdown"><a href="#"><span>Servicios</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="{{ route('fibraoptica') }}">Internet Fibra Óptica</a></li>

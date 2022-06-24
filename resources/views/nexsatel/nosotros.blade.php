@@ -109,15 +109,5 @@
         </div>
     </section>
     </main>
-
-
-    
-
-
 @endsection
-@section('script')
-    <script src="/css_nosotros/js/jquery.min.js"></script>
-    <script src="/css_nosotros/js/newapp.min.js"></script>
-    <script src="/css_nosotros/js/jquery.flipper-responsive.js"></script>
-    <script src="/css_nosotros/js/main.min75c4.js?ver=0.47"></script>
-@endsection
+

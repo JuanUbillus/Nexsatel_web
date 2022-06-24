@@ -1,0 +1,86 @@
+.banner {
+    background-image: url("../img/nosotros/banner.jpg");
+    height: calc(100vh - 96.28px);
+}
+
+.stripe-orange:after {
+    content: '';
+    position: absolute;
+    width: 80%;
+    height: 2px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-image: linear-gradient(90deg, #0e8ac4, #2396cd 70%);
+    bottom: -10px;
+}
+
+.text-lead {
+    color: #434343;
+}
+
+.box-mision {
+    border-radius: 90px 20px 20px 20px;
+}
+
+.box-vision {
+    border-radius: 20px 20px 90px 20px;
+    float: right;
+}
+
+.box-banner {
+    width: 80%;
+}
+
+.box-shadow {
+    box-shadow: 0 0 34px 4px #0000003b;
+}
+
+.height-desktop {
+    height: calc(100vh - 96.28px);
+}
+
+.align-items-end {
+    align-items: flex-end;
+}
+
+.bg-historia {
+    background-image: url("../img/nosotros/bg-ciudad.jpg");
+    background-attachment: fixed;
+}
+
+@media  screen and (max-width: 1200px) {}
+
+@media  screen and (max-width: 991px) {
+    .height-desktop {
+        height: auto;
+    }
+}
+
+@media  screen and (max-width: 768px) {
+    .banner {
+        background-image: url("img/nosotros/banner-movil.jpg");
+        height: auto
+    }
+
+    .box-banner {
+        width: 100%;
+    }
+
+    .box-banner .text-normal {
+        font-size: 14px !important;
+    }
+
+    .box-beneficios {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .box-beneficios img {
+        width: 90px;
+    }
+
+    .box-beneficios h2 {
+        width: 180px;
+    }
+}

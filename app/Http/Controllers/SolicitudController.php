@@ -7,6 +7,7 @@ use App\Models\Solicitud;
 use App\Models\Ubigeo;
 use Illuminate\Http\Request;
 use Maatwebsite\Excel\Facades\Excel;
+use Response;
 
 class SolicitudController extends Controller
 {
@@ -37,5 +38,11 @@ class SolicitudController extends Controller
         ini_set('memory_limit','-1');
         set_time_limit(3000000);
         return Excel::download(new SolicitudesExport, 'solicitudes_excel.xlsx');
+    }
+
+    public function contador(){
+        $solicitudes = Solicitud::all();
+        $contador = count($solicitudes);
+        return Response::json($contador);
     }
 }

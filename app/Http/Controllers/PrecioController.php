@@ -38,7 +38,7 @@ class PrecioController extends Controller
         $precio->desc_p3_3=$request->desc_p3_3;
         $precio->desc_p3_4=$request->desc_p3_4;
         $precio->desc_p3_5=$request->desc_p3_5;
-        $precio->tiempo=$request->mb;
+        $precio->mb=$request->mb;
         $precio->save();
         return redirect()->route('precios');
     }

@@ -4,42 +4,32 @@
   <i class="icon-whatsapp"></i>
 </a>
 <!-- ======= Hero Section ======= -->
-<section id="hero">
-  <div class="hero-container">
-    <div id="heroCarousel" data-bs-interval="5000" class="carousel slide carousel-fade" data-bs-ride="carousel">
-
-      <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
-
-      <div class="carousel-inner" role="listbox">
-
-        <!-- Slide 1 -->
-        <div class="carousel-item active">
-          <img src="{{ Storage::url($estilos->slider1)}}" class="img-fluid" alt="slider1">
-        </div>
-
-        <!-- Slide 2 -->
-        <div class="carousel-item">
-          <img src="{{ Storage::url($estilos->slider2)}}" class="img-fluid" alt="slider2">
-        </div>
-
-        <!-- Slide 3 -->
-        <div class="carousel-item">
-          <img src="{{ Storage::url($estilos->slider3)}}" class="img-fluid" alt="slider3">
-        </div>
-
-      </div>
-
-      <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
-      </a>
-
-      <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
-        <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
-      </a>
-
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="{{ Storage::url($estilos->slider1)}}" class="d-block w-100" height="100%" alt="banner">
+    </div>
+    <div class="carousel-item">
+      <img src="{{ Storage::url($estilos->slider2)}}" class="d-block w-100" height="100%" alt="banner">
+    </div>
+    <div class="carousel-item">
+      <img src="{{ Storage::url($estilos->slider3)}}" class="d-block w-100" height="100%" alt="banner">
     </div>
   </div>
-</section>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Anterior</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Siguiente</span>
+  </button>
+</div>
 
   <main id="main" class="main-beneficios">
 
@@ -77,7 +67,7 @@
     </section><!-- End Featured Section -->
 
     <!-- ======= Plans Section ======= -->
-    <section id="pricing" class="pricing">
+    <section id="pricing" class="pricing planes-edit">
       <div class="section-title">
         <h2>Planes</h2>
     </div>
@@ -129,6 +119,14 @@
       </div>
     </section><!-- End Pricing Section -->
 
+    <section>
+      <div class="container">
+        <div class="col-md-12 text-center">
+          <span class="text-secondary">*Tenemos planes para hogar, condominios y empresas, consulte sin compromiso mandando sus requerimientos por <a class="text-success" target="_blank" href="https://wa.me/+51{{ $estilos->whatsapp }}?text=Hola Nexsatel!!! quería informe sobre su servicio"><b>Whatsapp</b></a> o <a href="{{ route('contacto') }}"><b>nuestra web</b></a> y un asesor se comunicará con usted.</span>
+        </div>
+      </div>
+    </section>
+
     <!-- ======= Contrata Section ======= -->
     <section>
       <div class="container">
@@ -141,7 +139,7 @@
                           ventas llamando al:</p>
                       <a href="https://wa.me/+51{{ $estilos->whatsapp }}?text=Hola Nexsatel!!! quería informe sobre su servicio" target="_blank"
                           class="bg-white tel br-10 py-xs-2 px-xs-4 py-3 px-4 d-flex align-items-center justify-content-center">
-                          <img style="width: 47px" src="assets/img/phone-call.png" alt="phone">
+                          <img class="img-box-cellfone" style="width: 47px" src="assets/img/phone-call.png" alt="phone">
                           <p>
                               <span class="text-medium d-block mb-xs-0">965 780 922</span>
                           </p>
@@ -152,8 +150,8 @@
           </div>
         </div>
       </div>
+      
     </section><!-- End Contrata Section -->
-
     <!-- ======= Clients Section ======= -->
     <section id="clients" class="clients">
       <div class="container">

@@ -15,19 +15,19 @@
             <div class="card-body">
               <div class="form-group">
                     <label for="exampleInputPassword1">Whatsapp</label>
-                    <input type="text" class="form-control" name="whatsapp" value="{{ $whatsapp }}" required>
+                    <input type="text" class="form-control" name="whatsapp" value="{{ $whatsapp }}">
                   </div>  
               <div class="form-group">
                 <label for="exampleInputEmail1">Facebook</label>
-                <input type="text" class="form-control" name="facebook" value="{{ $facebook }}" required>
+                <input type="text" class="form-control" name="facebook" value="{{ $facebook }}">
               </div>
               <div class="form-group">
                 <label for="exampleInputEmail1">Instagram</label>
-                <input type="text" class="form-control" name="instagram" value="{{ $instagram }}" required>
+                <input type="text" class="form-control" name="instagram" value="{{ $instagram }}">
               </div>
               <div class="form-group">
                 <label for="exampleInputEmail1">Twitter</label>
-                <input type="text" class="form-control" name="twitter" value="{{ $twitter }}" required>
+                <input type="text" class="form-control" name="twitter" value="{{ $twitter }}">
               </div>
             </div>
             <!-- /.card-body -->

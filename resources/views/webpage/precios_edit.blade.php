@@ -18,8 +18,8 @@
                     <input type="text" class="form-control" name="titulo1" value="{{ $titulo1 }}" required>
               </div>
               <div class="form-group">
-                    <label for="exampleInputPassword1">Precio 1</label>
-                    <input type="text" class="form-control" name="precio1" value="{{ $precio1 }}" required>
+                    <label for="exampleInputPassword1">Plan 1</label>
+                    <input type="text" class="form-control" name="plan1" value="{{ $plan1 }}" required>
               </div>
               <div class="form-group">
                     <label for="exampleInputPassword1">Descripción 1</label>
@@ -46,8 +46,8 @@
                    <input type="text" class="form-control" name="titulo2" value="{{ $titulo2 }}" required>
               </div>
               <div class="form-group">
-                   <label for="exampleInputPassword1">Precio 2</label>
-                   <input type="text" class="form-control" name="precio2" value="{{ $precio2 }}" required>
+                   <label for="exampleInputPassword1">Plan 2</label>
+                   <input type="text" class="form-control" name="plan2" value="{{ $plan2 }}" required>
               </div>
               <div class="form-group">
                    <label for="exampleInputPassword1">Descripción 2</label>
@@ -74,8 +74,8 @@
                 <input type="text" class="form-control" name="titulo3" value="{{ $titulo3 }}" required>
            </div>
            <div class="form-group">
-                <label for="exampleInputPassword1">Precio 3</label>
-                <input type="text" class="form-control" name="precio3" value="{{ $precio3 }}" required>
+                <label for="exampleInputPassword1">Plan 3</label>
+                <input type="text" class="form-control" name="plan3" value="{{ $plan3 }}" required>
            </div>
            <div class="form-group">
                 <label for="exampleInputPassword1">Descripción 3</label>
@@ -98,8 +98,8 @@
                <input type="text" class="form-control" name="desc_p3_5" value="{{ $desc_p3_5 }}" required>
            </div>
            <div class="form-group">
-               <label for="exampleInputPassword1">Tiempo</label>
-               <input type="text" class="form-control" name="tiempo" value="{{ $tiempo }}" required>
+               <label for="exampleInputPassword1">Mb</label>
+               <input type="text" class="form-control" name="mb" value="{{ $mb }}" required>
            </div>            
             </div>
             <!-- /.card-body -->

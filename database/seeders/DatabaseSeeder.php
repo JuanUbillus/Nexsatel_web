@@ -22,6 +22,10 @@ class DatabaseSeeder extends Seeder
             EstiloTableSeeder::class,
             PreciosTableSeeder::class,
             CaracteristicasTableSeeder::class,
+            DepartamentosTableSeeder::class,
+            ProvinciasTableSeeder::class,
+            DistritosTableSeeder::class,
+            UbigeosTableSeeder::class,
         ]);
     }
 }

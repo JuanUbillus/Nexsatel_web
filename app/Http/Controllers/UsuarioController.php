@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Response;
 
 class UsuarioController extends Controller
 {
@@ -68,5 +69,11 @@ class UsuarioController extends Controller
         $id = Auth::user()->id;
         $user = User::find($id);
         return view('user.perfil',compact('user'));
+    }
+
+    public function contador() {
+        $usuarios = User::all();
+        $contador = count($usuarios);
+        return Response::json($contador);
     }
 }

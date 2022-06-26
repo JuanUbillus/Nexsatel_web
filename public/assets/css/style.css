@@ -21,12 +21,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .main-beneficios {
-  margin-top: 200px;
+  margin-top: 60px;
 }
 
 @media (max-width: 420px) {
   .main-beneficios {
-    margin-top: 0px;
+    margin-top: 30px;
   }
 }
 /*--------------------------------------------------------------
@@ -1177,6 +1177,9 @@ section {
 .pricing .featured .buy-btn:hover {
   background: #0094cb;
 }
+.planes-edit {
+  padding-bottom: 25px!important;
+}
 @media (max-width: 992px) {
   .pricing .box {
     max-width: 60%;
@@ -2131,6 +2134,7 @@ section {
   color: #545454;
   font-weight: bold;
   font-size: 25PX;
+  margin-top: 10px;
 }
 .box-nexsatel{
   display: flex;
@@ -2150,7 +2154,25 @@ section {
 .box-call{
   position: relative;
 }
-
+@media screen and (max-width:1400px){
+  .box-nexsatel img.men{
+      right: -100px;
+  }
+  .img-box-cellfone{
+    width: 40px!important;
+  }
+  .box-nexsatel {
+    padding-left: 70px!important;
+  }
+  .tel {
+    width: 260px;
+    height: 80px;
+    margin-left: 35px;
+  }
+  .text-normal-migra {
+    margin-left: 35px;
+  }
+}
 @media screen and (max-width: 991px) {
   .box-nexsatel{
     padding-left: 60px !important;
@@ -2173,6 +2195,14 @@ section {
   }
   .men {
     display: none;
+  }
+}
+@media screen and (max-width: 360px) {
+  .text-big-migra {
+    font-size: 25px;
+  }
+  .text-normal-migra {
+    margin-left: 0px;
   }
 }
 /*--------------------------------------------------------------

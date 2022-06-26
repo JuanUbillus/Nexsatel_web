@@ -6,8 +6,9 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
   <title>{{ $estilos->nombre_empresa }}</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+  <meta content="Somos una empresa peruana dedica a las telecomunicaciones, especializada en ofrecer diversos soluciones, tales como ofrecer el servicio de internet dedicado, Internet en casa, interconexión de sedes lógicas y físicas utilizando la tecnología Fibra Óptica
+  contando con profesionales altamente capacitados en diversas áreas, dedicado integradamente a dar solución dentro de la empresa, con más 10 años de experiencia en el mercado." name="description">
+  <meta content="Nexsatel, nexsaweb, nexatel, nexsatel, internet, fibra optica" name="keywords">
 
   <!-- Favicons -->
   <link href="{{ Storage::url($estilos->icono) }}" rel="icon">
@@ -61,8 +62,7 @@
           <li><a class="active" href="{{ route('index') }}">Inicio</a></li>
           <li><a href="{{ route('nosotros') }}">Nosotros</a></li>
           <li><a href="{{ route('pagos') }}">Formas de Pago</a></li>
-          <li><a href="{{ route('planes') }}">Planes</a></li>
-          <li class="dropdown"><a href="#"><span>Servicios</span> <i class="bi bi-chevron-down"></i></a>
+           <li class="dropdown"><a href="#"><span>Servicios</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="{{ route('fibraoptica') }}">Internet Fibra Óptica</a></li>
             </ul>
@@ -105,7 +105,6 @@
               <li><i class="bx bx-chevron-right"></i> <a href="/">Inicio</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="{{ route('nosotros') }}">Nosotros</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="{{ route('pagos') }}">Formas de Pago</a></li>
-              <!-- <li><i class="bx bx-chevron-right"></i> <a href="{{ route('planes') }}">Planes</a></li> -->
               <li><i class="bx bx-chevron-right"></i> <a href="{{ route('contacto') }}">Contacto</a></li>
             </ul>
           </div>

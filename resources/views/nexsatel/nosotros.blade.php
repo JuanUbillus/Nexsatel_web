@@ -83,7 +83,7 @@
                         <img src="/css_nosotros/img/nosotros/beneficio-4.png" alt="Icon banner">
                         <h2 class="text-white line-height-1 mt-3 text-medium pl-xs-4 mt-xs-0"><span
                                 class="bold">Disfruta</span><br>
-                            <small class="text-white">de tus juegos online sin lag</small>
+                            <small class="text-white">de tus juegos online sin pérdidas de conexión</small>
                         </h2>
                     </div>
                 </div>

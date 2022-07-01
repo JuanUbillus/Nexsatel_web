@@ -185,6 +185,41 @@
                             </li>
                         </ul>
                     </li>
+                    <li class="nav-item has-treeview">
+                        <a href="#" class="nav-link">
+                            <i class="nav-icon fas fa-map-marked-alt"></i>
+                            <p>
+                                Coberturas
+                                <i class="fas fa-angle-left right"></i>
+                            </p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                                <a href="/departamentos" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Departamentos</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="/provincias" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Provincias</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="/distritos" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Distritos</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="/ubigeos" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>UBIGEO</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
                 </ul>
             </nav>
             <!-- /.sidebar-menu -->

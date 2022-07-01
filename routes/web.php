@@ -13,6 +13,10 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\SolicitudController;
 use App\Http\Controllers\PrecioController;
 use App\Http\Controllers\CaracteristicaController;
+use App\Http\Controllers\DepartamentoController;
+use App\Http\Controllers\ProvinciaController;
+use App\Http\Controllers\DistritoController;
+use App\Http\Controllers\UbigeoController;
 use Illuminate\Support\Facades\Artisan;
 
 Route::get('/', [WebController::class, 'index'])->name('index');
@@ -95,6 +99,39 @@ Route::group(['middleware' => 'auth'], function () {
         Route::get('/sliders/editar/{id}', 'sliders_edit')->name('sliders.edit');
         Route::post('/sliders/update/{id}', 'sliders_update')->name('sliders.update');
     });
+    /* DEPARTAMENTOS */
+    Route::controller(DepartamentoController::class)->group(function (){
+        Route::get('/departamentos', 'index')->name('departamentos');
+        Route::post('/departamentos/guardar', 'store');
+        Route::get('/departamentos/editar/{id}', 'edit');
+        Route::post('/departamentos/update/{id}', 'update')->name('departamentos.update');
+        Route::get('/departamentos/borrar/{id}', 'delete');
+    });
+    /* PROVINCIAS */
+    Route::controller(ProvinciaController::class)->group(function (){
+        Route::get('/provincias', 'index')->name('provincias');
+        Route::post('/provincias/guardar', 'store');
+        Route::get('/provincias/editar/{id}', 'edit');
+        Route::post('/provincias/update/{id}', 'update')->name('provincias.update');
+        Route::get('/provincias/borrar/{id}', 'delete');
+    });
+    /* DISTRITOS */
+    Route::controller(DistritoController::class)->group(function (){
+        Route::get('/distritos', 'index')->name('distritos');
+        Route::post('/distritos/guardar', 'store');
+        Route::get('/distritos/editar/{id}', 'edit');
+        Route::post('/distritos/update/{id}', 'update')->name('distritos.update');
+        Route::get('/distritos/borrar/{id}', 'delete');
+    });
+    /* UBIGEOS */
+    Route::controller(UbigeoController::class)->group(function (){
+        Route::get('/ubigeos', 'index')->name('ubigeos');
+        Route::post('/ubigeos/guardar', 'store');
+        Route::get('/ubigeos/editar/{id}', 'edit');
+        Route::post('/ubigeos/update/{id}', 'update')->name('ubigeos.update');
+        Route::get('/ubigeos/borrar/{id}', 'delete');
+    });
+
 });
 Route::controller(ApiController::class)->group(function (){
     Route::get('/provincias/{departament}', 'provincia');

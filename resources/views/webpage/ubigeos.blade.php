@@ -20,7 +20,7 @@
                         <select name="departamento" id="departamento" class="form-control select2" style="width: 100%">
                             <option value="" selected>Departamento</option>
                             @foreach ($departamentos as $departamento)
-                                <option value="{{ $departamento->nombre }}">{{ $departamento->nombre }}</option>
+                                <option value="{{ $departamento->id }}">{{ $departamento->nombre }}</option>
                             @endforeach
                         </select>
                     </div>
@@ -29,7 +29,7 @@
                         <select name="provincia" id="provincia" class="form-control select2" style="width: 100%">
                             <option value="" selected>Provincia</option>
                             @foreach ($provincias as $provincia)
-                                <option value="{{ $provincia->nombre }}">{{ $provincia->nombre }}</option>
+                                <option value="{{ $provincia->id }}">{{ $provincia->nombre }}</option>
                             @endforeach
                         </select>
                     </div>
@@ -38,7 +38,7 @@
                         <select name="distrito" id="distrito" class="form-control select2" style="width: 100%">
                             <option value="" selected>Distritos</option>
                             @foreach ($distritos as $distrito)
-                                <option value="{{ $distrito->nombre }}">{{ $distrito->nombre }}</option>
+                                <option value="{{ $distrito->id }}">{{ $distrito->nombre }}</option>
                             @endforeach
                         </select>
                     </div>
@@ -109,12 +109,14 @@
   $(document).ready(function(){
     $('.btnEditar').click(function(){
       let val_id = $(this).data('id');
-      let url = '/provincias/editar/'+val_id;
+      let url = '/ubigeos/editar/'+val_id;
       $.get(url,function(res){
-        $('.tituloModal').html('Editar Provincia');
+        $('.tituloModal').html('Editar UBIGEO');
         $('.btnGuardar').html('Actualizar');
-        $('#nombre').val(res.nombre);
-        $('#formulario').attr('action','/provincias/update/'+val_id);
+        $('#departamento').val(res.departamento.nombre);
+        $('#provincia').val(res.provincia);
+        $('#distrito').val(res.distrito);
+        $('#formulario').attr('action','/ubigeos/update/'+val_id);
         $('#modalDatos').modal('show');
       });
     });
@@ -123,9 +125,9 @@
         let val_url = '/ubigeos/guardar';
           $('.tituloModal').html('Agregar UBIGEO');
           $('.btnGuardar').html('Agregar');
-          $('#departamento').val('');
-          $('#provincia').val('');
-          $('#distrito').val('');
+          $('#departamento option:first').prop('selected',true);
+          $('#provincia option:first')prop('selected',true);
+          $('#distrito option:first')prop('selected',true);
           $('#formulario').attr('action',val_url);
           $('#modalDatos').modal('show');
     })

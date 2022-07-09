@@ -8,11 +8,14 @@ use App\Models\Ubigeo;
 use Illuminate\Http\Request;
 use Maatwebsite\Excel\Facades\Excel;
 use Response;
+use App\Mail\ContactoMail;
+use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Redirect;
 
 class SolicitudController extends Controller
 {
     public function index(){
-        $solicitudes = Solicitud::all();
+        $solicitudes = Solicitud::orderBy('created_at', 'DESC')->get();
         return view('solicitud.index',compact('solicitudes'));
     }
 
@@ -31,6 +34,9 @@ class SolicitudController extends Controller
         $solicitud->tdocumento=$request->tdocumento;
         $solicitud->ndocumento=$request->ndocumento;
         $solicitud->save();
+        $texto ='Nexsatel';
+         Mail::to('atencionalcliente@nexsatel.com.pe')->send(new ContactoMail($texto));
+        
         return redirect()->route('contacto');
     }
 
@@ -44,5 +50,30 @@ class SolicitudController extends Controller
         $solicitudes = Solicitud::all();
         $contador = count($solicitudes);
         return Response::json($contador);
+    }
+    public function alert($id){
+        $solicitud = Solicitud::find($id);
+        
+        if($solicitud->estado=='P'){
+            $solicitud->estado='A';
+        }else{
+            $solicitud->estado='P';
+        }
+        $solicitud->save();
+        return redirect()->route('solicitudes');
+    }
+    public function ver($id){
+        $solicitud = Solicitud::find($id);
+        $datos = [
+            'nombre' => $solicitud->nombre,
+            'apellido' => $solicitud->apellido,
+            'distrito' => $solicitud->ubigeo->distrito->nombre,
+            'direccion' => $solicitud->direccion,
+            'telefono' => $solicitud->telefono,
+            'email' => $solicitud->email,
+            'tdocumento' => $solicitud->tdocumento,
+            'ndocumento' => $solicitud->ndocumento,
+        ];
+        return Response::json($datos);
     }
 }

@@ -729,6 +729,7 @@ section {
   color: #0094cb;
 }
 
+
 /*--------------------------------------------------------------
 # Our Clients
 --------------------------------------------------------------*/
@@ -2003,6 +2004,13 @@ section {
   width: 150px;
   height: 100px;
 }
+.imagen{
+  border-radius: 25px;
+  box-shadow: 15px 15px 10px black;
+}
+.imagen img {
+  width: 100%;
+}
 .box-logo-bancos{
   height: 70px;
   display: flex;
@@ -2203,6 +2211,11 @@ section {
   }
   .text-normal-migra {
     margin-left: 0px;
+  }
+}
+@media screen and (max-width: 850px) {
+  .men {
+    display: none;
   }
 }
 /*--------------------------------------------------------------

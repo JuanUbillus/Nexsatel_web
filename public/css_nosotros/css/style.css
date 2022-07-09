@@ -58,7 +58,7 @@
 
 @media  screen and (max-width: 768px) {
     .banner {
-        background-image: url("img/nosotros/banner-movil.jpg");
+        background-image: url("../img/nosotros/banner-movil.jpg");
         height: auto
     }
 

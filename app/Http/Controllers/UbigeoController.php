@@ -28,8 +28,14 @@ class UbigeoController extends Controller
     }
     public function edit($id){
         $ubigeo = Ubigeo::find($id);
+        $departamento = $ubigeo->departamento->id;
+        $provincia = $ubigeo->provincia->id;
+        $distrito = $ubigeo->distrito->id;
         $datos = [
-            'nombre' => $ubigeo->nombre,
+            'ubigeo' => $ubigeo,
+            'departamento' => $departamento,
+            'provincia' => $provincia,
+            'distrito' => $distrito
         ];
         return Response::json($datos);
     }

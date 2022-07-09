@@ -19,12 +19,14 @@ use App\Http\Controllers\DistritoController;
 use App\Http\Controllers\UbigeoController;
 use Illuminate\Support\Facades\Artisan;
 
+
 Route::get('/', [WebController::class, 'index'])->name('index');
 Route::get('/nosotros', [WebController::class, 'nosotros'])->name('nosotros');
 Route::get('/contacto', [WebController::class, 'contacto'])->name('contacto');
 Route::get('/planes', [WebController::class, 'planes'])->name('planes');
 Route::get('/servicio/fibraoptica', [WebController::class, 'fibraoptica'])->name('fibraoptica');
 Route::get('/pagos', [WebController::class, 'pagos'])->name('pagos');
+Route::get('/error', [WebController::class, 'error'])->name('error');
 Route::post('/contacto/solicitud',[SolicitudController::class, 'store']);
 Auth::routes();
 
@@ -61,6 +63,8 @@ Route::group(['middleware' => 'auth'], function () {
     /* SOLICITUD */
     Route::get('/solicitudes', [SolicitudController::class, 'index'])->name('solicitudes');
     Route::get('/solicitudes/export', [SolicitudController::class, 'exportExcel'])->name('solicitudes.export');
+    Route::get('/solicitudes/alert/{id}', [SolicitudController::class, 'alert'])->name('solicitudes.alert');
+    Route::get('/solicitudes/ver/{id}', [SolicitudController::class, 'ver'])->name('solicitud.ver');
 
     /* WEBPAGE */
     /* CABECERA */
@@ -142,6 +146,10 @@ Route::get('/linkear',function(){
     Artisan::call('storage:link');
 });
 
-Route::get('/migrar',function(){
-    Artisan::call('migrate:fresh --seed');
+Route::fallback(function() {
+    return redirect('/error');
+});
+
+Route::get('/cache',function(){
+    Artisan::call('config:cache');
 });

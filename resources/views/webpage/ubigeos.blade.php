@@ -108,12 +108,15 @@
 <script>
   $(document).ready(function(){
     $('.btnEditar').click(function(){
+      alert('sdasd0');
       let val_id = $(this).data('id');
+      
       let url = '/ubigeos/editar/'+val_id;
       $.get(url,function(res){
+        console.log(res);
         $('.tituloModal').html('Editar UBIGEO');
         $('.btnGuardar').html('Actualizar');
-        $('#departamento').val(res.departamento.nombre);
+        $('#departamento').val(res.departamento);
         $('#provincia').val(res.provincia);
         $('#distrito').val(res.distrito);
         $('#formulario').attr('action','/ubigeos/update/'+val_id);
@@ -126,8 +129,8 @@
           $('.tituloModal').html('Agregar UBIGEO');
           $('.btnGuardar').html('Agregar');
           $('#departamento option:first').prop('selected',true);
-          $('#provincia option:first')prop('selected',true);
-          $('#distrito option:first')prop('selected',true);
+          $('#provincia option:first').prop('selected',true);
+          $('#distrito option:first').prop('selected',true);
           $('#formulario').attr('action',val_url);
           $('#modalDatos').modal('show');
     })

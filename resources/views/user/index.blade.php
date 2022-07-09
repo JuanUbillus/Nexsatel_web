@@ -12,7 +12,6 @@
               <table class="table table-hover text-nowrap">
                 <thead>
                   <tr>
-                    <th>ID</th>
                     <th>Nombre</th>
                     <th>Apellido</th>
                     <th>Email</th>
@@ -30,7 +29,6 @@
                 <tbody>
                     @foreach ($usuarios as $usuario)
                     <tr>
-                        <td>{{ $usuario->id }}</td>
                         <td>{{ $usuario->nombre }}</td>
                         <td>{{ $usuario->apellido }}</td>
                         <td>{{ $usuario->email }}</td>
@@ -46,12 +44,10 @@
                           <a class="btn btn-info btn-sm" href="/usuario/editar/{{ $usuario->id }}">
                               <i class="fas fa-pencil-alt">
                               </i>
-                              Editar
                           </a>
                           <a class="btn btn-danger btn-sm" href="/usuario/borrar/{{ $usuario->id }}" onclick="return confirm('¿Estás seguro de eliminar este evento?')">
                               <i class="fas fa-trash">
                               </i>
-                              Eliminar
                           </a>
                       </td>
                       </tr>

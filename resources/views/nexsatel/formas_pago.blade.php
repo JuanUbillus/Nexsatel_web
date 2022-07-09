@@ -30,18 +30,19 @@
 
       <div class="col-lg-6 menu-item filter-agents">
         <div class="menu-content">
-          <a class="titulo" href="#">Agentes Afiliados:</a>
+          <a class="titulo" href="#">Agentes:</a>
         </div>
         <div class="menu-details mt-2">
           <ul class="lista">
-            <li><i class="bi bi-check-circle"></i> Acércate a ventanilla e indica que deseas realizar el pago de tu servicio de Internet.</li>
+            <li><i class="bi bi-check-circle"></i> Acércate al agente autorizado e indica que deseas realizar el pago de tu servicio de Internet.</li>
+            <li><i class="bi bi-check-circle"></i> Brinda el número de cuenta en donde realizarás el pago de tu mensualidad.</li>
           </ul>
         </div>
       </div>
 
       <div class="col-lg-6 menu-item filter-agents">
         <div class="menu-content imagen">
-          <img src="assets/img/bank.jpg" class="img-fluid" alt="">
+          <img src="assets/img/agente.jpg" class="img-fluid" alt="">
         </div>
       </div>
       <!-- ======= Menu bancos ======= -->
@@ -74,16 +75,16 @@
   $(document).ready(function(){
     $('.agente').click(function(){
       $('.titulo').html('Agentes:');
-      $('.lista').html('<li><i class="bi bi-check-circle"></i> Acércate a ventanilla e indica que deseas realizar el pago de tu servicio de Internet.</li>');
-      $('.imagen').html('<img src="assets/img/agente.png" class="img-fluid" alt="">');
+      $('.lista').html('<li><i class="bi bi-check-circle"></i> Acércate a ventanilla e indica que deseas realizar el pago de tu servicio de Internet.</li>'+
+                        '<li><i class="bi bi-check-circle"></i> Brinda el número de cuenta en donde realizarás el pago de tu mensualidad.</li>');
+      $('.imagen').html('<img src="assets/img/agente.jpg" class="img-fluid" alt="">');
       document.getElementById('agents').style.display='block';
     });
     $('.linea').click(function(){
       $('.titulo').html('En línea:');
-      $('.lista').html('<li><i class="bi bi-check-circle"></i> Acércate a ventanilla e indica que deseas realizar el pago de tu servicio de Internet.</li>'+
-                      '<li><i class="bi bi-check-circle"></i> Brinda tu código de abonado, ubicado en la parte superior derecha de tu recibo (no consideres '+
-                      'los 00 de la izquierda). De ser necesario agregar un código previo al de <br> abonado te lo indicamos líneas abajo.</li>');
-      $('.imagen').html('<img src="assets/img/linea.png" class="img-fluid" alt="">');
+      $('.lista').html('<li><i class="bi bi-check-circle"></i> Ingresa a tu banca móvil y realiza el pago mediante una transferencia bancaria.</li>'+
+                      '<li><i class="bi bi-check-circle"></i> Si lo realiza de un banco distinto será necesario utilizar el número de cuenta Interbancario.</li>');
+      $('.imagen').html('<img src="assets/img/linea.jpg" class="img-fluid" alt="">');
       document.getElementById('agents').style.display='none';
     });
 });

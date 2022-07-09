@@ -18,7 +18,6 @@ class DatabaseSeeder extends Seeder
             EmpresasTableSeeder::class,
             UsersTableSeeder::class,
             TarifasTableSeeder::class,
-            //SolicitudesTableSeeder::class,
             EstiloTableSeeder::class,
             PreciosTableSeeder::class,
             CaracteristicasTableSeeder::class,
@@ -26,6 +25,7 @@ class DatabaseSeeder extends Seeder
             ProvinciasTableSeeder::class,
             DistritosTableSeeder::class,
             UbigeosTableSeeder::class,
+            SolicitudesTableSeeder::class,
         ]);
     }
 }

@@ -3,8 +3,8 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="icon" href="/assets/img/logo3.png" type="image/png">
-    <title>Empresa | Dashboard</title>
+    <link rel="icon" href="/assets/img/logo2.png" type="image/png">
+    <title>Nexsatel | Dashboard</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Font Awesome -->
@@ -71,7 +71,7 @@
     <aside class="main-sidebar sidebar-dark-primary elevation-4">
         <!-- Brand Logo -->
         <a href="/home" class="brand-link">
-            <img src="/assets/img/logo3.png" alt="Nexsatel Logo" class="brand-image img-circle elevation-3"
+            <img src="/assets/img/logo2.png" alt="Nexsatel Logo" class="brand-image img-circle elevation-3"
                  style="opacity: .8">
             <span class="brand-text font-weight-bolder">Nexsatel</span>
         </a>

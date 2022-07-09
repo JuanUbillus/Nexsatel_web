@@ -64,4 +64,10 @@ class WebController extends Controller
         ];
         return view('nexsatel.servicios_fibra',$datos);
     }
+    public function error(){
+        $datos = [
+            'estilos' => Estilo::all()->first(),
+        ];
+        return view('error', $datos);
+    }
 }

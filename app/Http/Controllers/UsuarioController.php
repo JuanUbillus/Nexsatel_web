@@ -26,7 +26,6 @@ class UsuarioController extends Controller
         $usuario->Email=$request->email;
         $usuario->Telefono=$request->telefono;
         $usuario->Tipo=$request->tipo;
-        $usuario->Rol=$request->rol;
         $usuario->Estado=$request->estado;
         $usuario->Direccion=$request->direccion;
         $usuario->Password=Hash::make($request->password);
@@ -49,10 +48,11 @@ class UsuarioController extends Controller
         $usuario->Email=$request->email;
         $usuario->Telefono=$request->telefono;
         $usuario->Tipo=$request->tipo;
-        $usuario->Rol=$request->rol;
         $usuario->Estado=$request->estado;
         $usuario->Direccion=$request->direccion;
-        $usuario->Password=$request->password;
+        if($request->password != null){
+            $usuario->Password=Hash::make($request->password);
+        }
         $usuario->Dni=$request->dni;
         $usuario->Adicional=$request->adicional;
         $usuario->save();

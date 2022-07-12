@@ -20,6 +20,7 @@ class solicitudesExport implements FromCollection, WithHeadings, WithMapping, Sh
             'Dirección',
             'Telefono',
             'Email',
+            'Mensaje',
             'Estado'
         ];
     }
@@ -36,6 +37,7 @@ class solicitudesExport implements FromCollection, WithHeadings, WithMapping, Sh
             $solicitud->direccion,
             $solicitud->telefono,
             $solicitud->email,
+            $solicitud->mensaje,
             $solicitud->estado,
         ];
     }

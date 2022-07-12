@@ -1,5 +1,6 @@
 @extends('layouts.appp')
 @section('content')
+<div id="particles-js"></div>
 <a class="btn-wsp"  target="_blank" href="https://wa.me/+51{{ $estilos->whatsapp }}?text=Hola Nexsatel!!! quería informe sobre su servicio">
   <i class="icon-whatsapp"></i>
 </a>
@@ -42,21 +43,21 @@
 
         <div class="row">
           <div class="col-lg-4">
-            <div class="icon-box">
+            <div class="icon-box caracteristica">
               <i class="bi bi-shield-lock"></i>
               <h3><a href="">{{ $caracteristicas->titulo1 }}</a></h3>
               <p>{{ $caracteristicas->descripcion1 }}.</p>
             </div>
           </div>
           <div class="col-lg-4 mt-4 mt-lg-0">
-            <div class="icon-box">
+            <div class="icon-box conectividad">
               <i class="bi bi-bar-chart"></i>
               <h3><a href="">{{ $caracteristicas->titulo2 }}</a></h3>
               <p>{{ $caracteristicas->descripcion2 }}.</p>
             </div>
           </div>
           <div class="col-lg-4 mt-4 mt-lg-0">
-            <div class="icon-box">
+            <div class="icon-box garantia">
               <i class="bi bi-cloud-check"></i>
               <h3><a href="">{{ $caracteristicas->titulo3 }}</a></h3>
               <p>{{ $caracteristicas->descripcion3 }}.</p>
@@ -70,7 +71,7 @@
     <section id="pricing" class="pricing planes-edit">
       <div class="section-title">
         <h2>Planes</h2>
-    </div>
+      </div>
       <div class="container">
         <div class="row no-gutters">
           <div class="col-lg-4 box">

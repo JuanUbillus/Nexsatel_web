@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Precio;
 use Illuminate\Http\Request;
+use Response;
 
 class PrecioController extends Controller
 {
@@ -12,8 +13,32 @@ class PrecioController extends Controller
         return view('webpage.precios_index',compact('precios'));
     }
     public function precios_edit(){
-        $precios = Precio::find(1);
-        return view('webpage.precios_edit', $precios);
+        $precio = Precio::find(1);
+        $datos = [
+            'titulo1' => $precio->titulo1,
+            'plan1' => $precio->plan1,
+            'mb' => $precio->mb,
+            'desc_p1' => $precio->desc_p1,
+            'desc_p1_2' => $precio->desc_p1_2,
+            'desc_p1_3' => $precio->desc_p1_3,
+            'desc_p1_4' => $precio->desc_p1_4,
+            'desc_p1_5' => $precio->desc_p1_5,
+            'titulo2' => $precio->titulo2,
+            'plan2' => $precio->plan2,
+            'desc_p2' => $precio->desc_p2,
+            'desc_p2_2' => $precio->desc_p2_2,
+            'desc_p2_3' => $precio->desc_p2_3,
+            'desc_p2_4' => $precio->desc_p2_4,
+            'desc_p2_5' => $precio->desc_p2_5,
+            'titulo3' => $precio->titulo3,
+            'plan3' => $precio->plan3,
+            'desc_p3' => $precio->desc_p3,
+            'desc_p3_2' => $precio->desc_p3_2,
+            'desc_p3_3' => $precio->desc_p3_3,
+            'desc_p3_4' => $precio->desc_p3_4,
+            'desc_p3_5' => $precio->desc_p3_5,
+        ];
+        return Response::json($datos);
     }
     public function precios_update(Request $request){
         $precio = Precio::find(1);

@@ -558,12 +558,45 @@ section {
   padding: 40px 30px;
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.15);
   border-radius: 10px;
-  background: #fff;
+  /*background: #000;*/
   transition: all ease-in-out 0.3s;
   height: 100%;
 }
+.featured .caracteristica {
+  background-image: linear-gradient(135deg,
+                    #00B7D4, #0094cb, #1f5ea7, #102c4d,
+                    #223f69, #3a3a3a, #000);   
+  background-size: 500%;
+  animation: fanimado 10s infinite;
+}
+.featured .conectividad {
+  background-image: linear-gradient(140deg,
+                    #00B7D4, #0094cb, #1f5ea7, #102c4d,
+                    #223f69, #3a3a3a, #000);  
+  background-size: 500%;
+  animation: fanimado 10s infinite;
+}
+.featured .garantia {
+  background-image: linear-gradient(145deg,
+                    #00B7D4, #0094cb, #1f5ea7, #102c4d,
+                    #223f69, #3a3a3a, #000);    
+  background-size: 500%;
+  animation: fanimado 10s infinite;
+}
+@keyframes fanimado{
+  0%{
+    background-position: 0% 50%;
+  }
+  50%{
+    background-position: 100% 50%;
+  }
+  100%{
+    background-position: 0% 50%;
+  }
+}
 .featured .icon-box i {
-  color: #0094cb;
+  /*color: #0094cb;*/
+  color: #fff;
   font-size: 42px;
   margin-bottom: 15px;
   display: block;
@@ -575,21 +608,22 @@ section {
   font-size: 20px;
 }
 .featured .icon-box h3 a {
-  color: #545454;
+  /*color: #545454;*/
+  color: #fff;
   transition: 0.3s;
 }
 .featured .icon-box p {
-  color: #545454;
+  color: #fff;
   line-height: 24px;
   font-size: 14px;
   margin-bottom: 0;
 }
-.featured .icon-box:hover {
+/*.featured .icon-box:hover {
   background: #0094cb;
-}
-.featured .icon-box:hover i, .featured .icon-box:hover h3 a, .featured .icon-box:hover p {
+}*/
+/*.featured .icon-box:hover i, .featured .icon-box:hover h3 a, .featured .icon-box:hover p {
   color: #fff;
-}
+}*/
 
 /*--------------------------------------------------------------
 # About
@@ -2290,4 +2324,11 @@ section {
 .imagen-fibra img {
   height: auto;
   width: 100%;
+}
+
+#particles-js {
+	height: 100vh; 
+	width: 100%;
+    position: fixed;
+    z-index: -1;
 }

@@ -57,13 +57,6 @@
                 </select>
               </div>
               <div class="form-group">
-                <label for="exampleInputRol">Rol</label>
-                <select name="rol" class="form-control select2" style="width: 100%">
-                  <option value="A">Administrador</option>
-                  <option value="S">Soporte</option>
-                </select>
-              </div>
-              <div class="form-group">
                 <label for="exampleInputEstado">Estado</label>
                 <select name="estado" class="form-control select2" style="width: 100%">
                   <option value="A">Activo</option>

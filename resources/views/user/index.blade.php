@@ -21,7 +21,6 @@
                     <th>Dni</th>
                     <th>Tipo</th>
                     <th>Estado</th>
-                    <th>Rol</th>
                     <th>Adicional</th>
                     <th>Acciones</th>
                   </tr>
@@ -38,7 +37,6 @@
                         <td>{{ $usuario->dni }}</td>
                          <td>{{ $usuario->tipo }}</td>
                          <td>{{ $usuario->estado }}</td>
-                         <td>{{ $usuario->rol }}</td>
                          <td>{{ $usuario->adicional }}</td>
                         <td class="project-actions">
                           <a class="btn btn-info btn-sm" href="/usuario/editar/{{ $usuario->id }}">

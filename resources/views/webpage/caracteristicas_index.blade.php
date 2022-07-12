@@ -21,7 +21,7 @@
                     </div>
                     <div class="form-group">
                         <label for="exampleInputPassword1">Descripción 1</label>
-                        <input type="text" class="form-control" name="descripcion1" id="descripcion1">
+                        <textarea class="form-control" rows="3" id="descripcion1" name="descripcion1"></textarea>
                     </div>
                     <div class="form-group">
                         <label for="exampleInputPassword1">Titulo 2 </label>
@@ -29,7 +29,7 @@
                     </div>
                     <div class="form-group">
                         <label for="exampleInputPassword1">Descripción 2</label>
-                        <input type="text" class="form-control" name="descripcion2" id="descripcion2">
+                        <textarea class="form-control" rows="3" id="descripcion2" name="descripcion2"></textarea>
                     </div>
                     <div class="form-group">
                       <label for="exampleInputPassword1">Titulo 3 </label>
@@ -37,7 +37,7 @@
                     </div>
                     <div class="form-group">
                       <label for="exampleInputPassword1">Descripción 3</label>
-                      <input type="text" class="form-control" name="descripcion3" id="descripcion3">
+                      <textarea class="form-control" rows="3" id="descripcion3" name="descripcion3"></textarea>
                     </div>
             </div>
             <div class="card-footer">
@@ -84,7 +84,6 @@
                           <button class="btn btn-info btn-sm btnEditarCaracteristicas" type="button" data-id="{{ $caracteristica->id }}" data-toggle="modal" data-target="#modalCaracteristicas">
                             <i class="fas fa-pencil-alt">
                             </i>
-                            Editar
                         </button>
                         </td>
                     </tr>

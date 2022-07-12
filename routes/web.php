@@ -82,13 +82,13 @@ Route::group(['middleware' => 'auth'], function () {
     /* REDES SOCIALES */
     Route::controller(EstiloController::class)->group(function (){
         Route::get('/redes', 'redes_index')->name('redes');
-        Route::get('/redes/editar/', 'redes_edit')->name('redes.edit');
+        Route::get('/redes/editar', 'redes_edit')->name('redes.edit');
         Route::post('/redes/update', 'redes_update')->name('redes.update');
     });
     /* PRECIOS PRINCIPALES */
     Route::controller(PrecioController::class)->group(function (){
         Route::get('/precios', 'precios_index')->name('precios');
-        Route::get('/precios/editar/', 'precios_edit')->name('precios.edit');
+        Route::get('/precios/editar', 'precios_edit')->name('precios.edit');
         Route::post('/precios/update', 'precios_update')->name('precios.update');
     });
     /* CARACTERISTICAS */

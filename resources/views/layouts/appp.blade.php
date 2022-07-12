@@ -27,7 +27,7 @@
   <!-- Template Main CSS File -->
   <link href="/assets/css/style.css" rel="stylesheet">
   <link rel="stylesheet" href="/css/fontello.css">
-  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/style.css?v=1.2">
   @yield('links')
 
 </head>
@@ -160,6 +160,8 @@
   <script src="/jquery-3.6.0.min.js"></script>
   <!-- Template Main JS File -->
   <script src="/assets/js/main.js"></script>
+  <script src="/assets/js/particles.min.js"></script>
+  <script src="/assets/js/app.js"></script>
   @yield('script')
 </body>
 

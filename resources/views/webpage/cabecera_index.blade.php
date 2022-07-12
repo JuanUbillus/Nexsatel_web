@@ -29,7 +29,7 @@
                     </div>
                     <div class="form-group">
                         <label for="exampleInputPassword1">Ubicación</label>
-                        <input type="text" class="form-control" name="ubicacion" id="ubicacion">
+                        <textarea class="form-control" rows="3" id="ubicacion" name="ubicacion"></textarea>
                     </div>
             </div>
             <div class="card-footer">
@@ -72,7 +72,6 @@
                           <button class="btn btn-info btn-sm btnEditarCabecera" type="button" data-id="{{ $estilo->id }}" data-toggle="modal" data-target="#modalCabecera">
                               <i class="fas fa-pencil-alt">
                               </i>
-                              Editar
                           </button>
                         </td>
                     </tr>

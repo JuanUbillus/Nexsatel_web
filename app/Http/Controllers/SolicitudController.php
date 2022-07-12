@@ -33,9 +33,10 @@ class SolicitudController extends Controller
         $solicitud->email=$request->email;
         $solicitud->tdocumento=$request->tdocumento;
         $solicitud->ndocumento=$request->ndocumento;
+        $solicitud->mensaje=$request->mensaje;
         $solicitud->save();
         $texto ='Nexsatel';
-         Mail::to('atencionalcliente@nexsatel.com.pe')->send(new ContactoMail($texto));
+         Mail::to('juan.ubillusr@gmail.com')->send(new ContactoMail($texto));
         
         return redirect()->route('contacto');
     }
@@ -73,6 +74,7 @@ class SolicitudController extends Controller
             'email' => $solicitud->email,
             'tdocumento' => $solicitud->tdocumento,
             'ndocumento' => $solicitud->ndocumento,
+            'mensaje' => $solicitud->mensaje,
         ];
         return Response::json($datos);
     }

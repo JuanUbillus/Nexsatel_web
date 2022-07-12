@@ -22,6 +22,7 @@ class CreateSolicitudesTable extends Migration
             $table->string('email',50)->nullable();
             $table->string('tdocumento',10);
             $table->string('ndocumento',20);
+            $table->string('mensaje',500);
             $table->foreignId('ubigeo_id')->references('id')->on('ubigeos');
             $table->char('estado',1)->default('P')->comment('P:Pendiente | A:Atendido');
             $table->timestamps();

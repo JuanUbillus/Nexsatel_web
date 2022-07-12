@@ -108,12 +108,9 @@
 <script>
   $(document).ready(function(){
     $('.btnEditar').click(function(){
-      alert('sdasd0');
       let val_id = $(this).data('id');
-      
       let url = '/ubigeos/editar/'+val_id;
       $.get(url,function(res){
-        console.log(res);
         $('.tituloModal').html('Editar UBIGEO');
         $('.btnGuardar').html('Actualizar');
         $('#departamento').val(res.departamento);

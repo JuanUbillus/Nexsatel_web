@@ -84,7 +84,7 @@ class EstiloController extends Controller
             'instagram' => $estilo->instagram,
             'twitter' => $estilo->twitter,
         ];
-        return view('webpage.redes_edit', $datos);
+        return response::json($datos);
     }
     public function redes_update(Request $request){
         $estilo = Estilo::find(1);

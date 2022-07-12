@@ -62,7 +62,13 @@
                   <div class="col-sm-12">
                     <div class="form-group">
                       <label>Dirección</label>
-                      <textarea class="form-control" rows="3" id="direccion" name="direccion" disabled></textarea>
+                      <textarea class="form-control" rows="1" id="direccion" name="direccion" disabled></textarea>
+                    </div>
+                  </div>
+                  <div class="col-sm-12">
+                    <div class="form-group">
+                      <label>Mensaje</label>
+                      <textarea class="form-control" rows="2" id="mensaje" name="mensaje" disabled></textarea>
                     </div>
                   </div>
                 </div>                
@@ -139,6 +145,7 @@
       $('#email').val(res.email);
       $('#tdocumento').val(res.tdocumento);
       $('#ndocumento').val(res.ndocumento);
+      $('#mensaje').val(res.mensaje);
       $('#ObservarTablas').modal('show');
     });
   });

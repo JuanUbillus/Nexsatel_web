@@ -24,6 +24,7 @@ class SolicitudesTableSeeder extends Seeder
                 'telefono' => "58525478",
                 'tdocumento' => "DNI",
                 'ndocumento' => "5258547",
+                'mensaje' => "prueba01",
             ],
             [
                 'id' => 2,
@@ -34,6 +35,7 @@ class SolicitudesTableSeeder extends Seeder
                 'telefono' => "547852585",
                 'tdocumento' => "RUC",
                 'ndocumento' => "2000475858",
+                'mensaje' => "prueba02",
             ]
         ];
         Solicitud::insert($solicitudes);

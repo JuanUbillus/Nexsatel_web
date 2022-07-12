@@ -7,12 +7,6 @@
                 <div class="col-sm-6">
                     <h1>Datos Personales</h1>
                 </div>
-                <div class="col-sm-6">
-                    <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item active">Datos Personales</li>
-                    </ol>
-                </div>
             </div>
         </div><!-- /.container-fluid -->
     </section>
@@ -33,9 +27,6 @@
                                 <h3 class="profile-username text-center text-success">{{ $user->nombre }}</h3>
                                 <p class="text-muted text-center">{{ $user->apellido }}</p>
                                 <ul class="list-group list-group-unbordered mb-3">
-                                    <li class="list-group-item">
-                                        <b style="color:#0B7300">Edad</b><a class="float-right">12</a>
-                                    </li>
                                     <li class="list-group-item">
                                         <b style="color:#0B7300">DNI</b><a class="float-right">{{ $user->dni }}</a>
                                     </li>
@@ -81,41 +72,30 @@
                                 <h3 class="card-title">Editar Datos Personales</h3>
                             </div>
                             <div class="card-body">
-                                <div class="alert alert-success text-center" id="editado" style='display:none;'>
-                                    <span><i class="fas fa-check m-1"></i>Editado</span>
-                                </div>
-                                <div class="alert alert-danger text-center" id="noeditado" style='display:none;'>
-                                    <span><i class="fas fa-times m-1"></i>Edicion deshabilitada</span>
-                                </div>
                                 <form id='form-usuario' class="form-horizontal">
+                                    @csrf
                                     <div class="form-group row">
                                         <label for="telefono" class="col-sm-2 col-form-label">Telefono</label>
                                         <div class="col-sm-10">
-                                            <input type="number" id="telefono" class="form-control">
+                                            <input type="number" id="telefono" name="telefono" class="form-control">
                                         </div>
                                     </div>
                                     <div class="form-group row">
-                                        <label for="Residencia" class="col-sm-2 col-form-label">Residencia</label>
+                                        <label for="Residencia" class="col-sm-2 col-form-label">Dirección</label>
                                         <div class="col-sm-10">
-                                            <input type="text" id="residencia" class="form-control">
+                                            <input type="text" id="direccion" name="direccion" class="form-control">
                                         </div>
                                     </div>
                                     <div class="form-group row">
                                         <label for="correo" class="col-sm-2 col-form-label">correo</label>
                                         <div class="col-sm-10">
-                                            <input type="text" id="correo" class="form-control">
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label for="sexo" class="col-sm-2 col-form-label">Sexo</label>
-                                        <div class="col-sm-10">
-                                            <input type="text" id="sexo" class="form-control">
+                                            <input type="text" id="correo" name="correo" class="form-control">
                                         </div>
                                     </div>
                                     <div class="form-group row">
                                         <label for="adicional" class="col-sm-2 col-form-label">Informacion Adicional</label>
                                         <div class="col-sm-10">
-                                            <textarea class="form-control" id="adicional" cols="30" rows="10"></textarea>
+                                            <textarea class="form-control" id="adicional" name="adicional" cols="30" rows="16"></textarea>
                                         </div>
                                     </div>
                                     <div class="form-group row">

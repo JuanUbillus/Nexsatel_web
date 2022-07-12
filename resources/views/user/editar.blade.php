@@ -15,15 +15,15 @@
             <div class="card-body">
               <div class="form-group">
                     <label for="exampleInputPassword1">Nombre</label>
-                    <input type="text" class="form-control" name="nombre" value="{{ $usuario->nombre }}" required>
+                    <input type="text" class="form-control" name="nombre" value="{{ $usuario->nombre }}">
               </div> 
               <div class="form-group">
                 <label for="exampleInputPassword1">Apellido</label>
-                <input type="text" class="form-control" name="apellido" value="{{ $usuario->apellido }}" required>
+                <input type="text" class="form-control" name="apellido" value="{{ $usuario->apellido }}">
               </div>  
               <div class="form-group">
                 <label for="exampleInputEmail1">Email</label>
-                <input type="email" class="form-control" name="email" value="{{ $usuario->email }}" required>
+                <input type="email" class="form-control" name="email" value="{{ $usuario->email }}">
               </div>
               <div class="form-group">
                 <label for="exampleInputEmail1">Telefono</label>
@@ -55,14 +55,6 @@
                   <option value="{{ $usuario->tipo }}">{{ $usuario->tipo=='A'?'Administrador':'Trabajador' }}</option>
                   <option value="A">Administrador</option>
                   <option value="T">Trabajador</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label for="exampleInputRol">Rol</label>
-                <select name="rol" class="form-control select2"  style="width: 100%">
-                  <option value="{{ $usuario->rol }}">{{ $usuario->rol=='A'?'Administrador':'Soporte' }}</option>
-                  <option value="A">Administrador</option>
-                  <option value="S">Soporte</option>
                 </select>
               </div>
               <div class="form-group">

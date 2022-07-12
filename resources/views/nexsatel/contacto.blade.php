@@ -43,7 +43,7 @@
       <div class="row">
 
         <div class="col-lg-6 ">
-          <iframe class="mb-4 mb-lg-0" src="{{ $estilos->ubicacion }}" frameborder="0" style="border:0; width: 100%; height: 384px;" allowfullscreen></iframe>
+          <iframe class="mb-4 mb-lg-0" src="{{ $estilos->ubicacion }}" frameborder="0" style="border:0; width: 100%; height: 506px;" allowfullscreen></iframe>
         </div>
 
         <div class="col-lg-6">
@@ -93,6 +93,9 @@
               </div>
               <div class="col-md-6 form-group mt-3">
                 <input type="text" class="form-control" name="ndocumento" placeholder="N° de documento" required>
+              </div>
+              <div class="col-md-12 form-group mt-3">
+                <textarea class="form-control" rows="2" id="mensaje" name="mensaje" placeholder="Mensaje..." required></textarea>
               </div>
             </div>
 

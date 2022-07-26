@@ -22,14 +22,8 @@
                       </div>
                     </div>
                     <div class="form-group">
-                      <div class="input-group">
-                        <div class="custom-file">
-                          <input type="file" class="custom-file-input" id="slider1" name="slider1">
-                          <label class="custom-file-label" for="exampleInputFile"></label>
-                        </div>
-                        <div class="input-group-append">
-                          <span class="input-group-text" id="">Subir</span>
-                        </div>
+                      <div class="custom-file">
+                        <input type="file" class="input-group" id="slider1" name="slider1">
                       </div>
                     </div>
                     <div class="form-group">
@@ -39,14 +33,8 @@
                       </div>
                     </div>
                     <div class="form-group">
-                      <div class="input-group">
-                        <div class="custom-file">
-                          <input type="file" class="custom-file-input" id="slider2" name="slider2">
-                          <label class="custom-file-label" for="exampleInputFile"></label>
-                        </div>
-                        <div class="input-group-append">
-                          <span class="input-group-text" id="">Subir</span>
-                        </div>
+                      <div class="custom-file">
+                        <input type="file" class="input-group" id="slider2" name="slider2">
                       </div>
                     </div>
                     <div class="form-group">
@@ -56,14 +44,8 @@
                       </div>
                     </div>
                     <div class="form-group">
-                      <div class="input-group">
-                        <div class="custom-file">
-                          <input type="file" class="custom-file-input" id="slider3" name="slider3">
-                          <label class="custom-file-label" for="exampleInputFile"></label>
-                        </div>
-                        <div class="input-group-append">
-                          <span class="input-group-text" id="">Subir</span>
-                        </div>
+                      <div class="custom-file">
+                        <input type="file" class="input-group" id="slider3" name="slider3">
                       </div>
                     </div>
             </div>

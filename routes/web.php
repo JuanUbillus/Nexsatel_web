@@ -37,15 +37,17 @@ Route::group(['middleware' => 'auth'], function () {
     Route::group(['middleware' => 'admin'], function () {
         /* USUARIOS */
         Route::get('/usuarios', [UsuarioController::class, 'index'])->name('usuarios');
-        Route::get('/usuario/create', [UsuarioController::class, 'create']);
-        Route::post('/usuario/guardar', [UsuarioController::class, 'store']);
-        Route::get('/usuario/editar/{id}', [UsuarioController::class, 'edit']);
-        Route::post('/usuario/actualizar/{id}', [UsuarioController::class, 'update']);
-        Route::get('/usuario/borrar/{id}', [UsuarioController::class, 'delete']);
-
+        Route::post('/usuarios/guardar', [UsuarioController::class, 'store']);
+        Route::get('/usuarios/editar/{id}', [UsuarioController::class, 'edit']);
+        Route::post('/usuarios/actualizar/{id}', [UsuarioController::class, 'update']);
+        Route::get('/usuarios/borrar/{id}', [UsuarioController::class, 'delete']);
+        Route::get('/perfil', [UsuarioController::class, 'perfil']);
+        Route::get('/usuarios/editar/perfil/{id}', [UsuarioController::class, 'editarDatosPersonales']);
+        Route::post('/usuarios/actualizar/perfil/{id}', [UsuarioController::class, 'updateDatosPersonales']);
+        Route::post('/usuarios/update/foto', [UsuarioController::class, 'cambiarFoto']);
+        Route::post('/usuarios/update/password', [UsuarioController::class, 'cambiarContraseña']);
     });
-    Route::get('/perfil', [UsuarioController::class, 'perfil']);
-
+    
     /* EMPRESA */
     Route::post('/empresa/guardar', [EmpresaController::class, 'store']);
     Route::get('/empresa/editar/{id}', [EmpresaController::class, 'edit']);

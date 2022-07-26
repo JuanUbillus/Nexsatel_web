@@ -17,7 +17,7 @@
             <div class="card-body">
                     <div class="form-group">
                         <label for="exampleInputPassword1">Departamentos</label>
-                        <select name="departamento" id="departamento" class="form-control select2" style="width: 100%">
+                        <select name="departamento" id="departamento" class="form-control select2" style="width: 100%" required>
                             <option value="" selected>Departamento</option>
                             @foreach ($departamentos as $departamento)
                                 <option value="{{ $departamento->id }}">{{ $departamento->nombre }}</option>
@@ -26,7 +26,7 @@
                     </div>
                     <div class="form-group">
                         <label for="exampleInputPassword1">Provincias</label>
-                        <select name="provincia" id="provincia" class="form-control select2" style="width: 100%">
+                        <select name="provincia" id="provincia" class="form-control select2" style="width: 100%" required>
                             <option value="" selected>Provincia</option>
                             @foreach ($provincias as $provincia)
                                 <option value="{{ $provincia->id }}">{{ $provincia->nombre }}</option>
@@ -35,7 +35,7 @@
                     </div>
                     <div class="form-group">
                         <label for="exampleInputPassword1">Distritos</label>
-                        <select name="distrito" id="distrito" class="form-control select2" style="width: 100%">
+                        <select name="distrito" id="distrito" class="form-control select2" style="width: 100%" required>
                             <option value="" selected>Distritos</option>
                             @foreach ($distritos as $distrito)
                                 <option value="{{ $distrito->id }}">{{ $distrito->nombre }}</option>

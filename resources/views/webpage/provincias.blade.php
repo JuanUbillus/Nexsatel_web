@@ -17,7 +17,7 @@
             <div class="card-body">
                     <div class="form-group">
                         <label for="exampleInputPassword1">Nombre</label>
-                        <input type="text" class="form-control" name="nombre" id="nombre">
+                        <input type="text" class="form-control" name="nombre" id="nombre" required>
                     </div>
             </div>
             <div class="card-footer">

@@ -167,13 +167,11 @@
             @foreach ( $empresas as $empresa )
               <div class="swiper-slide"><img src="{{ Storage::url( $empresa->Imagen ) }}" class="img-fluid" alt=""></div>
             @endforeach
-            
           </div>
           <div class="swiper-pagination"></div>
         </div>
-
       </div>
     </section><!-- End Clients Section -->
-
+    
   </main><!-- End #main -->
 @endsection

@@ -26,14 +26,8 @@
                       </div>
                     </div>
                     <div class="form-group">
-                      <div class="input-group">
-                        <div class="custom-file">
-                          <input type="file" class="custom-file-input" id="logo" name="logo">
-                          <label class="custom-file-label" for="exampleInputFile"></label>
-                        </div>
-                        <div class="input-group-append">
-                          <span class="input-group-text" id="">Subir</span>
-                        </div>
+                      <div class="custom-file">
+                        <input type="file" class="input-group" id="logo" name="logo">
                       </div>
                     </div>
                     <div class="form-group">
@@ -43,14 +37,8 @@
                       </div>
                     </div>
                     <div class="form-group">
-                      <div class="input-group">
-                        <div class="custom-file">
-                          <input type="file" class="custom-file-input" id="icono" name="icono">
-                          <label class="custom-file-label" for="exampleInputFile"></label>
-                        </div>
-                        <div class="input-group-append">
-                          <span class="input-group-text" id="">Subir</span>
-                        </div>
+                      <div class="custom-file">
+                        <input type="file" class="input-group" id="icono" name="icono">
                       </div>
                     </div>
                     

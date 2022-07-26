@@ -6,12 +6,13 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Storage;
 use Response;
 
 class UsuarioController extends Controller
 {
     public function index(){
-        $usuarios = User::all();
+        $usuarios = User::orderBy('nombre', 'ASC')->get();
         return view('user.index', compact('usuarios'));
     }
     
@@ -27,18 +28,24 @@ class UsuarioController extends Controller
         $usuario->Telefono=$request->telefono;
         $usuario->Tipo=$request->tipo;
         $usuario->Estado=$request->estado;
-        $usuario->Direccion=$request->direccion;
         $usuario->Password=Hash::make($request->password);
         $usuario->Dni=$request->dni;
-        $usuario->Adicional=$request->adicional;
-        $usuario->Foto="public/avatar/1.png";
         $usuario->save();
         return redirect()->route('usuarios');
     }
 
     public function edit($id){
         $usuario = User::find($id);
-        return view('user.editar', compact('usuario'));
+        $datos = [
+            'nombre' => $usuario->nombre,
+            'apellido' => $usuario->apellido,
+            'email' => $usuario->email,
+            'telefono' => $usuario->telefono,
+            'tipo' => $usuario->tipo,
+            'estado' => $usuario->estado,
+            'dni' => $usuario->dni,
+        ];
+        return Response::json($datos);
     }
     
     public function update ($id, Request $request){
@@ -49,12 +56,10 @@ class UsuarioController extends Controller
         $usuario->Telefono=$request->telefono;
         $usuario->Tipo=$request->tipo;
         $usuario->Estado=$request->estado;
-        $usuario->Direccion=$request->direccion;
         if($request->password != null){
             $usuario->Password=Hash::make($request->password);
         }
         $usuario->Dni=$request->dni;
-        $usuario->Adicional=$request->adicional;
         $usuario->save();
         return redirect('/usuarios');
     }
@@ -76,4 +81,54 @@ class UsuarioController extends Controller
         $contador = count($usuarios);
         return Response::json($contador);
     }
+    public function editarDatosPersonales(){
+        $id = Auth::user()->id;
+        $usuario = User::find($id);
+        $datos = [
+            'telefono' => $usuario->telefono,
+            'direccion' => $usuario->direccion,
+            'email' => $usuario->email,
+            'adicional' => $usuario->adicional,
+        ];
+        return Response::json($datos);
+    }
+    public function updateDatosPersonales(Request $request){
+        $id = Auth::user()->id;
+        $usuario = User::find($id);
+        $usuario->telefono=$request->telefono;
+        $usuario->direccion=$request->direccion;
+        $usuario->email=$request->email;
+        $usuario->adicional=$request->adicional;
+        $usuario->save();
+        return redirect('/perfil');
+    }
+    public function cambiarFoto(Request $request){
+        $id = Auth::user()->id;
+        $usuario = User::find($id);
+        if(isset($request->foto)){  
+            if($usuario->foto==null){
+                $usuario->foto=$request->file('foto')->store('public/img');
+            }else{
+                Storage::delete($usuario->foto);
+                $usuario->foto=$request->file('foto')->store('public/img');
+            }
+        }
+        $usuario->save();
+        return redirect('/perfil');  
+    }
+    public function cambiarContraseña(Request $request){
+        $id = Auth::user()->id;
+        $usuario = User::find($id);
+        $response = 'error';
+        if(Hash::check($request->oldpass, $usuario->password)){
+            $usuario->password=Hash::make($request->newpass);
+            $usuario->save();
+            $response = 'ok';
+        }
+        return Response::json($response);
+    }
+
+
+
+    
 }

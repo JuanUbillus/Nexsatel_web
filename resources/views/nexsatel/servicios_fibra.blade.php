@@ -72,7 +72,7 @@
           <ul class="lista-fibra">
             <p>Ventajas de Internet 100% Fibra Óptica en tu Negocio:</p>
             <li><i class="bi bi-wifi"></i> 100% Fibra Óptica Simétrica.</li>
-            <li><i class="bi bi-wifi"></i> Velocidad mínima garantizada de 40%.</li>
+            <li><i class="bi bi-wifi"></i> Velocidad mínima garantizada de 80%.</li>
             <li><i class="bi bi-wifi"></i> Altas velocidades (Tecnología GPON)</li>
             <li><i class="bi bi-wifi"></i> Soporte 24/7</li>
           </ul>
